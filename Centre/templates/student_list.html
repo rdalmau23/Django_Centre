@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Llistat d'Alumnes{% endblock %}
+
+{% block content %}
+<h2>Llistat d'Alumnes</h2>
+<ul class="list-group">
+    {% for alumne in alumnes %}
+    <li class="list-group-item">
+        <a href="{% url 'alumne-detail' alumne.pk %}">
+            {{ alumne.nom }} {{ alumne.cognom1 }} {{ alumne.cognom2 }}
+        </a> - {{ alumne.correu }} - {{ alumne.curs }}
+    </li>
+    {% empty %}
+    <li class="list-group-item">No hi ha alumnes.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

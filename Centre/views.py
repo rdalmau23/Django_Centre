@@ -1,14 +1,25 @@
-from django.http import HttpResponse
-from django.template import loader
+from django.views.generic import ListView, DetailView
+from .models import Alumne, Professor
 
-# Create your views here.
-def index(request):
-    professor = {"name": "Roger", "surname": "Sobrino", "age": "17"}
+# Vistas para alumnes
+class AlumneListView(ListView):
+    model = Alumne
+    template_name = 'Centre/student_list.html'
+    context_object_name = 'alumnes'
 
-    template = loader.get_template('index.html')
+class AlumneDetailView(DetailView):
+    model = Alumne
+    template_name = 'Centre/student_detail.html'
+    context_object_name = 'alumne'
 
-    dades = template.render({'nombre': professor["name"],
-                             'surname': professor["surname"],
-                             'age': professor["age"]})
+# Vistas para professors
+class ProfessorListView(ListView):
+    model = Professor
+    template_name = 'Centre/teacher_list.html'
+    context_object_name = 'professors'
 
-    return HttpResponse(dades)
+class ProfessorDetailView(DetailView):
+    model = Professor
+    template_name = 'Centre/teacher_detail.html'
+    context_object_name = 'professor'
+

@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+
+{% block title %}Detall Alumne{% endblock %}
+
+{% block content %}
+<h2>{{ alumne.nom }} {{ alumne.cognom1 }} {{ alumne.cognom2 }}</h2>
+<p><strong>Correu:</strong> {{ alumne.correu }}</p>
+<p><strong>Curs:</strong> {{ alumne.curs }}</p>
+<p><strong>Mòduls Matriculats:</strong>
+    {% if alumne.moduls.all %}
+        <ul>
+        {% for modul in alumne.moduls.all %}
+            <li>{{ modul.nom }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        Cap mòdul matriculat.
+    {% endif %}
+</p>
+<a href="{% url 'alumne-list' %}" class="btn btn-secondary">Tornar al llistat</a>
+{% endblock %}

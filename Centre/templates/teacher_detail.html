@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+
+{% block title %}Detall Professor{% endblock %}
+
+{% block content %}
+<h2>{{ professor.nom }} {{ professor.cognom1 }} {{ professor.cognom2 }}</h2>
+<p><strong>Correu:</strong> {{ professor.correu }}</p>
+<p><strong>Curs:</strong> {{ professor.curs }}</p>
+<p><strong>Tutor:</strong> {% if professor.tutor %}Sí{% else %}No{% endif %}</p>
+<p><strong>Mòduls que imparteix:</strong>
+    {% if professor.moduls.all %}
+        <ul>
+        {% for modul in professor.moduls.all %}
+            <li>{{ modul.nom }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        Cap mòdul assignat.
+    {% endif %}
+</p>
+<a href="{% url 'professor-list' %}" class="btn btn-secondary">Tornar al llistat</a>
+{% endblock %}

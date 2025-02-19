@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -37,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Centre'
+    # Tu app:
+    'Centre',
 ]
 
 MIDDLEWARE = [
@@ -55,8 +57,12 @@ ROOT_URLCONF = 'DjangoProject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        # Si quieres que Django busque plantillas tanto en la carpeta "templates" del proyecto
+        # como en la carpeta "templates" dentro de la app "Centre", añade ambas rutas:
+        'DIRS': [
+            BASE_DIR / 'templates',        # Directorio global de plantillas
+            BASE_DIR / 'Centre' / 'templates',  # Directorio de plantillas dentro de la app
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -72,9 +78,26 @@ TEMPLATES = [
 WSGI_APPLICATION = 'DjangoProject.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/5.1/ref/settings/#databases
+# --------------------------------------------------------------------
+# BASE DE DATOS
+# --------------------------------------------------------------------
+# Si quieres usar PostgreSQL, descomenta esta sección y configura tus credenciales.
+# Si prefieres quedarte con SQLite, ignora esta parte y deja la configuración original.
 
+"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'nombre_de_tu_bbdd',
+        'USER': 'tu_usuario',
+        'PASSWORD': 'tu_contraseña',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+"""
+
+# Configuración actual (SQLite). Coméntala si usas PostgreSQL.
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -105,12 +128,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
+# Puedes ajustar el idioma y la zona horaria si lo deseas.
+LANGUAGE_CODE = 'es-es'  # o 'ca' si prefieres catalán
+TIME_ZONE = 'Europe/Madrid'
 
 USE_I18N = True
-
 USE_TZ = True
 
 
@@ -118,6 +140,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+
+# Si quieres servir archivos estáticos desde una carpeta "Static" en la raíz:
+STATICFILES_DIRS = [
+    BASE_DIR / 'Static',
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

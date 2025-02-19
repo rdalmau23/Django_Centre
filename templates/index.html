@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{% block title %}Centre{% endblock %}</title>
+    <link rel="stylesheet" href=".././Static/Styles/header.css">
 </head>
 <body>
-{% include "head/header.html" %}
-    <h1>Hola cocacola</h1>
+    {% include "head/header.html" %}
+    <div class="container mt-4">
+        {% block content %}
+        {% endblock %}
+    </div>
 </body>
 </html>

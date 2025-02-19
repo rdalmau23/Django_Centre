@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+
+{% block title %}Llistat de Professors{% endblock %}
+
+{% block content %}
+<h2>Llistat de Professors</h2>
+<ul class="list-group">
+    {% for professor in professors %}
+    <li class="list-group-item">
+        <a href="{% url 'professor-detail' professor.pk %}">
+            {{ professor.nom }} {{ professor.cognom1 }} {{ professor.cognom2 }}
+        </a> - {{ professor.correu }} - {{ professor.curs }}
+        {% if professor.tutor %}
+            - Tutor
+        {% endif %}
+    </li>
+    {% empty %}
+    <li class="list-group-item">No hi ha professors.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
