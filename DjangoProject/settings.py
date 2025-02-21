@@ -84,27 +84,17 @@ WSGI_APPLICATION = 'DjangoProject.wsgi.application'
 # Si quieres usar PostgreSQL, descomenta esta sección y configura tus credenciales.
 # Si prefieres quedarte con SQLite, ignora esta parte y deja la configuración original.
 
-"""
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'nombre_de_tu_bbdd',
-        'USER': 'tu_usuario',
-        'PASSWORD': 'tu_contraseña',
+        'NAME': 'tic_bcn_inicials_alumnat',
+        'USER': 'rdalmau',
+        'PASSWORD': 'rdc041',
         'HOST': 'localhost',
         'PORT': '5432',
     }
 }
-"""
-
-# Configuración actual (SQLite). Coméntala si usas PostgreSQL.
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators

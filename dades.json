@@ -1,0 +1,44 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "nom": "Marc",
+      "cognom1": "Pérez",
+      "cognom2": "Gómez",
+      "correu": "marc.perez@example.com",
+      "curs": "DAW2A",
+      "moduls_matriculats": ["M01", "M02", "M03"]
+    },
+    {
+      "id": 2,
+      "nom": "Laura",
+      "cognom1": "Fernández",
+      "cognom2": "Ruiz",
+      "correu": "laura.fernandez@example.com",
+      "curs": "DAW2A",
+      "moduls_matriculats": ["M02", "M04", "M05"]
+    }
+  ],
+  "teachers": [
+    {
+      "id": 1,
+      "nom": "Jordi",
+      "cognom1": "Martínez",
+      "cognom2": "López",
+      "correu": "jordi.martinez@example.com",
+      "curs": "DAW2A",
+      "tutor": true,
+      "moduls_imparteix": ["M01", "M03"]
+    },
+    {
+      "id": 2,
+      "nom": "Sofia",
+      "cognom1": "Rodríguez",
+      "cognom2": "García",
+      "correu": "sofia.rodriguez@example.com",
+      "curs": "DAW2A",
+      "tutor": false,
+      "moduls_imparteix": ["M02", "M04"]
+    }
+  ]
+}
