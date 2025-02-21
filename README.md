@@ -1,6 +1,6 @@
-TIC_BCN_Inicials_Alumnat
+# TIC_BCN_Inicials_Alumnat
 
-Descripció
+## Descripció
 
 Aquest projecte Django gestiona les dades d'alumnes i professors del curs DAW2A. Inclou models, vistes i rutes per accedir a la informació, i està connectat a una base de dades PostgreSQL.
 
@@ -12,11 +12,11 @@ Django
 
 PostgreSQL
 
-Instal·lació i configuració
+##Instal·lació i configuració
 
 Clonar el repositori:
 
-git clone https://github.com/usuari/tic_bcn_inicials_alumnat.git
+git clone https://github.com/rdalmau23/Django_Centre.git
 cd tic_bcn_inicials_alumnat
 
 Crear i activar l'entorn virtual:
@@ -29,7 +29,7 @@ Instal·lar dependències:
 
 pip install -r requirements.txt
 
-Configurar PostgreSQL:
+## Configurar PostgreSQL:
 
 CREATE DATABASE tic_bcn_inicials_alumnat;
 CREATE USER rdalmau WITH PASSWORD 'rdc041';
@@ -51,7 +51,7 @@ DATABASES = {
     }
 }
 
-Aplicar migracions:
+## Aplicar migracions:
 
 python manage.py makemigrations
 python manage.py migrate
@@ -62,19 +62,19 @@ python manage.py createsuperuser
 
 (Introdueix el teu usuari i contrasenya)
 
-Execució
+## Execució
 
-Iniciar el servidor de desenvolupament:
+- Iniciar el servidor de desenvolupament:
 
-python manage.py runserver
+- python manage.py runserver
 
-Accedir a l'aplicació:
+- Accedir a l'aplicació:
 
-Web: http://127.0.0.1:8000/
+- Web: http://127.0.0.1:8000/
 
-Admin: http://127.0.0.1:8000/admin
+- Admin: http://127.0.0.1:8000/admin
 
-Rutes Principals
+## Rutes Principals
 
 /alumnes/ - Llista d'alumnes
 
@@ -91,8 +91,6 @@ Captures de pantalla
 Autor
 
 Nom: Rafel Dalmau
-
-Contacte: correu@example.com
 
 Llicència
 
