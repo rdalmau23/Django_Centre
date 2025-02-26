@@ -22,6 +22,6 @@ from django.contrib import admin
 
 
 urlpatterns = [
-    path('Centre/', include('Centre.urls')),
+    path('centre/', include('Centre.urls')),
     path('admin/', admin.site.urls),
 ]

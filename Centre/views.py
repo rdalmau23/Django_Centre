@@ -1,7 +1,12 @@
+from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from .models import Alumne, Professor
 
-# Vistas para alumnes
+# Vista per a la pàgina principal
+def centre_home(request):
+    return render(request, 'index.html')
+
+# Vistes per a alumnes
 class AlumneListView(ListView):
     model = Alumne
     template_name = 'student_list.html'
@@ -12,7 +17,7 @@ class AlumneDetailView(DetailView):
     template_name = 'student_detail.html'
     context_object_name = 'alumne'
 
-# Vistas para professors
+# Vistes per a professors
 class ProfessorListView(ListView):
     model = Professor
     template_name = 'teacher_list.html'

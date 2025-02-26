@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}Centre{% endblock %}</title>
-    <link rel="stylesheet" href=".././Static/Styles/header.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Styles/header.css' %}">
 </head>
 <body>
     {% include "head/header.html" %}

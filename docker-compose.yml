@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: tic_bcn_inicials_alumnat
+      POSTGRES_USER: rdalmau
+      POSTGRES_PASSWORD: rdc041
+    ports:
+      - "5433:5432"
+
+  web:
+    build: .
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_NAME: tic_bcn_inicials_alumnat
+      DATABASE_USER: rdalmau
+      DATABASE_PASSWORD: rdc041
+      DATABASE_HOST: db
+      DATABASE_PORT: 5432
+    command: ["sh", "-c", "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]
