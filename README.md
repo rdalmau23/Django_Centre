@@ -12,7 +12,7 @@ Django
 
 PostgreSQL
 
-##Instal·lació i configuració
+## Instal·lació i configuració
 
 ### Clonar el repositori:
 
