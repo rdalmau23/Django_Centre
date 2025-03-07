@@ -109,7 +109,7 @@ Accés al panell d'administració de Django per gestionar estudiants, professors
 
 ## Autor
 
-### Nom: Rafel Dalmau
+### Rafel Dalmau
 
 ## Llicència
 
