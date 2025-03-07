@@ -38,7 +38,7 @@ ALTER ROLE rdalmau SET default_transaction_isolation TO 'read committed';
 ALTER ROLE rdalmau SET timezone TO 'Europe/Madrid';
 GRANT ALL PRIVILEGES ON DATABASE tic_bcn_inicials_alumnat TO rdalmau;
 
-Modificar settings.py per connectar a la base de dades:
+### Modificar settings.py per connectar a la base de dades:
 
 DATABASES = {
     'default': {
