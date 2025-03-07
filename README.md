@@ -70,7 +70,7 @@ python manage.py createsuperuser
 
 - Accedir a l'aplicació:
 
-- Web: http://127.0.0.1:8000/
+- Web: http://127.0.0.1:8000/centre
 
 - Admin: http://127.0.0.1:8000/admin
 
