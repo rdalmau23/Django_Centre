@@ -1,4 +1,4 @@
-# TIC_BCN_Inicials_Alumnat
+# Practica 13 Django
 
 ## Descripció
 
