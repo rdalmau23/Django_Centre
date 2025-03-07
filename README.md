@@ -84,9 +84,28 @@ python manage.py createsuperuser
 
 /professors/<id>/ - Detall d'un professor
 
-Captures de pantalla
+## Vistes de l'Aplicació
 
-(Afegir captures de pantalla de l'aplicació si cal)
+### Llista d'Estudiants  
+Aquesta vista mostra tots els estudiants registrats al sistema amb la seva informació bàsica.  
+![Llista d'Estudiants](img/students.png)
+
+### Detall d'un Estudiant  
+Vista detallada d'un estudiant concret amb tota la seva informació acadèmica.  
+![Detall d'un Estudiant](img/student_detail.png)
+
+### Llista de Professors  
+Es mostren tots els professors registrats al centre amb la seva informació rellevant.  
+![Llista de Professors](img/teachers.png)
+
+### Detall d'un Professor  
+Vista amb tota la informació detallada d'un professor en concret.  
+![Detall d'un Professor](img/teacher_detail.png)
+
+### Panell d'Administració  
+Accés al panell d'administració de Django per gestionar estudiants, professors i altres dades.  
+![Panell d'Administració](img/admin.png)
+
 
 Autor
 
