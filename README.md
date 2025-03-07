@@ -4,7 +4,7 @@
 
 Aquest projecte Django gestiona les dades d'alumnes i professors del curs DAW2A. Inclou models, vistes i rutes per accedir a la informació, i està connectat a una base de dades PostgreSQL.
 
-Requisits previs
+### Requisits previs
 
 Python 3.11+
 
@@ -14,18 +14,18 @@ PostgreSQL
 
 ##Instal·lació i configuració
 
-Clonar el repositori:
+### Clonar el repositori:
 
 git clone https://github.com/rdalmau23/Django_Centre.git
 cd tic_bcn_inicials_alumnat
 
-Crear i activar l'entorn virtual:
+### Crear i activar l'entorn virtual:
 
 python -m venv .venv
 source .venv/bin/activate  # Linux/Mac
 .venv\Scripts\activate  # Windows
 
-Instal·lar dependències:
+### Instal·lar dependències:
 
 pip install -r requirements.txt
 
@@ -107,11 +107,11 @@ Accés al panell d'administració de Django per gestionar estudiants, professors
 ![Panell d'Administració](img/admin.png)
 
 
-Autor
+## Autor
 
-Nom: Rafel Dalmau
+### Nom: Rafel Dalmau
 
-Llicència
+## Llicència
 
-Aquest projecte està sota la llicència MIT.
+### Aquest projecte està sota la llicència MIT.
 
